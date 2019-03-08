@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class FollowMyMousePointer : MonoBehaviour
 {
-
-    public Camera PlayerCam;
-
     // Update is called once per frame
     void Update()
     {
@@ -15,7 +12,6 @@ public class FollowMyMousePointer : MonoBehaviour
         // solve math problem beforhand by setting the ofset of the camera
         mousePos.z = 10;
         // calculate and position the object to the position of the mouse in the actual "world"
-        this.transform.position = PlayerCam.ScreenToWorldPoint(mousePos);
+        this.transform.position = Camera.main.ScreenToWorldPoint(mousePos);
     }
-
 }
