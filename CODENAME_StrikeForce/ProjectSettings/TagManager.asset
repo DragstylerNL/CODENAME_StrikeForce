@@ -4,7 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Crosshair
+  - Crosshair_Mouse
+  - Enemy
+  - Wall
+  - Ground
   layers:
   - Default
   - TransparentFX

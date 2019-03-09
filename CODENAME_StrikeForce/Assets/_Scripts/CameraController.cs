@@ -14,7 +14,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         // 
-        Crosshair = GameObject.FindGameObjectWithTag("Crosshair").GetComponent<Transform>();
+        Crosshair = GameObject.FindGameObjectWithTag("Crosshair_Mouse").GetComponent<Transform>();
     }
 
     // Update is called once per frame
