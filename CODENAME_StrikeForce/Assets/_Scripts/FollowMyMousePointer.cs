@@ -12,6 +12,6 @@ public class FollowMyMousePointer : MonoBehaviour
         // solve math problem beforhand by setting the ofset of the camera
         mousePos.z = 10;
         // calculate and position the object to the position of the mouse in the actual "world"
-        this.transform.position = Camera.main.ScreenToWorldPoint(mousePos);
+        this.transform.position = Camera.main.ScreenToWorldPoint(mousePos); 
     }
 }
