@@ -6,8 +6,7 @@ TagManager:
   tags:
   - Crosshair_Mouse
   - Enemy
-  - Wall
-  - Ground
+  - Env
   layers:
   - Default
   - TransparentFX

@@ -55,7 +55,7 @@ public class PlayerShoot : MonoBehaviour
                 //get the tag
                 string tag = hits[i].collider.transform.parent.tag;
                 // chech if it hit the wall or the ground
-                if (tag == "Wall" || tag == "Ground")
+                if (tag == "Env")
                 {
                     // if we cant shoot through walls and such
                     if (!_wallHacks)
@@ -69,7 +69,7 @@ public class PlayerShoot : MonoBehaviour
                 // check if we have hit a enemy or not
                 else if (tag == "Enemy")
                 {
-                    // BOOM
+                    // BOOM execute enemy hit logic
                     print("ENEMY HAS BEEN HIT BOOOOOOM");
                     // draw the line
                     DrawTheLine(hits[i].point);
@@ -101,6 +101,6 @@ public class PlayerShoot : MonoBehaviour
         // spawn the line into the world
         nextLine = Instantiate(nextLine);
         // activate the self destruct module
-        nextLine.GetComponent<DestroyTimer>().Activate(1f);
+        nextLine.GetComponent<DestroyTimer>().Activate(0.1f);
     }
 }
