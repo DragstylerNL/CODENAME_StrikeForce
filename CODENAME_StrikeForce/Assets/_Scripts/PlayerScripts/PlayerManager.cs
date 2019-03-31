@@ -19,10 +19,11 @@ public class PlayerManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         // get input 
         bool _shoot = Input.GetButtonDown("MS_Right");
 
+        // do something with the input
         if (_shoot)
         {
             PlayerShoot.RequestShot();

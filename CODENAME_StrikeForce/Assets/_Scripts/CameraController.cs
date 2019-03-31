@@ -9,28 +9,30 @@ public class CameraController : MonoBehaviour
     public int percentageInbetween = 90;
 
     private Transform Crosshair;
+    private Transform playerTS;
 
     // Start is called before the first frame update
     void Start()
     {
         // 
         Crosshair = GameObject.FindGameObjectWithTag("Crosshair_Mouse").GetComponent<Transform>();
+        playerTS = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // variable to edit
         Vector3 direction = new Vector3(0, 0, 0);
         // get the position of the crosshair in relation to the player
-        direction = Crosshair.position - transform.position;
+        direction = Crosshair.position - playerTS.position;
         // devide by 100 and times the percentage
         direction /= 100;
         direction *= percentageInbetween;
         // keep the z value of the Camera at 10
         direction.z = -10;
         // set the positon of the Camera on the pos that we wanted
-        transform.position = direction;
+        transform.position = direction + playerTS.position;
     }
 
     /// <summary>
